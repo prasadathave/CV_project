@@ -12,12 +12,12 @@ from lib.network.rtpose_vgg import get_model, use_vgg
 from lib.datasets import coco, transforms, datasets
 from lib.config import update_config
 
-DATA_DIR = '/data/coco'
+DATA_DIR = '/kaggle/input/coco-2017-dataset/coco2017/'
 
-ANNOTATIONS_TRAIN = [os.path.join(DATA_DIR, 'annotations', item) for item in ['person_keypoints_train2017.json']]
-ANNOTATIONS_VAL = os.path.join(DATA_DIR, 'annotations', 'person_keypoints_val2017.json')
-IMAGE_DIR_TRAIN = os.path.join(DATA_DIR, 'images/train2017')
-IMAGE_DIR_VAL = os.path.join(DATA_DIR, 'images/val2017')
+ANNOTATIONS_TRAIN = [os.path.join('/kaggle/input/coco-2017-dataset/coco2017/annotations', item) for item in ['person_keypoints_train2017.json']]
+ANNOTATIONS_VAL = os.path.join('/kaggle/input/coco-2017-dataset/coco2017/annotations', 'person_keypoints_val2017.json')
+IMAGE_DIR_TRAIN = os.path.join('/kaggle/input/coco-2017-dataset/coco2017/', 'train2017')
+IMAGE_DIR_VAL = os.path.join('/kaggle/input/coco-2017-dataset/coco2017/', 'val2017')
 
 
 def train_cli(parser):
